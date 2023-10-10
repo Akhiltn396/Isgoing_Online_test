@@ -6,8 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useSelector } from "react-redux";
 const Navbar = () => {
   const navigate = useNavigate();
-  const cart = useSelector(state=>state.cart)
-
+  const cart = useSelector((state) => state.cart);
 
   const handleLogin = () => {
     navigate("/login");

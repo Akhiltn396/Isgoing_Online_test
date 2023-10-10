@@ -9,17 +9,13 @@ const Cart = () => {
 
   console.log(cart);
 
-const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleRemove = (id) => {
     dispatch(removeProducts(id));
   };
   return (
     <div className="cart">
-      {/* <h1>{cart.products}</h1>
-<h1>{cart.quantity}</h1>
-<h1>{cart.image}</h1> */}
-
       {cart.products.map((c) => (
         <div className="container">
           <div className="image">
@@ -28,7 +24,7 @@ const dispatch = useDispatch()
           <p>{c.title}</p>
 
           <div>
-            <button onClick={()=>handleRemove(c.id)}>Remove from cart</button>
+            <button onClick={() => handleRemove(c.id)}>Remove from cart</button>
           </div>
         </div>
       ))}

@@ -14,7 +14,7 @@ import { persistStore } from "redux-persist";
 
 function App() {
   const queryClient = new QueryClient();
-  const persistor = persistStore(store)
+  const persistor = persistStore(store);
   const Layout = () => {
     return (
       <div className="app">

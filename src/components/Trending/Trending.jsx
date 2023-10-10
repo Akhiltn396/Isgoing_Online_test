@@ -5,14 +5,13 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
-import {useDispatch} from "react-redux"
+import { useDispatch } from "react-redux";
 import { addProduct, removeProducts } from "../../redux/cartSlice";
 
 const Trending = () => {
   const [product, setProduct] = useState();
   const [quantity, setQuantity] = useState(1);
-  const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["getProduct"],
@@ -27,31 +26,26 @@ const Trending = () => {
         }),
   });
 
+  // const handleDec =(id) =>{
 
-// const handleDec =(id) =>{
-
-//     console.log("id",id);
-//     console.log(data);
-//     if(data.id == id){
-//         setQuantity((prev)=>prev-1)
-//         }
-// }
-// const handleInc =(id) =>{
-//     if(data.id == id){
-//         setQuantity((prev)=>prev+1)
-//         }
-// }
-
+  //     console.log("id",id);
+  //     console.log(data);
+  //     if(data.id == id){
+  //         setQuantity((prev)=>prev-1)
+  //         }
+  // }
+  // const handleInc =(id) =>{
+  //     if(data.id == id){
+  //         setQuantity((prev)=>prev+1)
+  //         }
+  // }
 
   const handleClick = (product) => {
     console.log(product);
-setQuantity((prev)=>prev+1)
+    setQuantity((prev) => prev + 1);
 
-dispatch(addProduct({product,quantity}))
-// dispatch(removeProducts())
-};
-
-
+    dispatch(addProduct({ product, quantity }));
+  };
 
   return (
     <div className="trending">

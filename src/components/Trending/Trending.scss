@@ -30,34 +30,32 @@
         display: flex;
         gap: 210px;
 
-        h3{
-        color: red;
+        h3 {
+          color: red;
         }
 
-        p{
-        background-color: blue;
-        padding: 4px;
-        color: white;
+        p {
+          background-color: blue;
+          padding: 4px;
+          color: white;
         }
       }
 
-      .quantity{
+      .quantity {
         font-size: 30px;
         margin-bottom: 15px;
         display: flex;
         justify-content: space-around;
-
+      }
     }
-
-    }
-    button{
-   margin-left: 100px;
-   padding: 10px;
-   background-color: yellow;
-   border-radius: 5px;
-   font-weight: 900;
-   color: black;
-   cursor: pointer;
+    button {
+      margin-left: 100px;
+      padding: 10px;
+      background-color: yellow;
+      border-radius: 5px;
+      font-weight: 900;
+      color: black;
+      cursor: pointer;
     }
     .destination:hover {
       padding: 20px;

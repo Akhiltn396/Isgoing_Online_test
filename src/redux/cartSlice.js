@@ -18,7 +18,7 @@ const cartSlice = createSlice({
         (item) => item.id !== action.payload
       );
 
-      state.products = removeItem;;
+      state.products = removeItem;
       state.quantity = 0;
     },
   },
