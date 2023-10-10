@@ -1,0 +1,36 @@
+// @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto+Slab&display=swap");
+
+.navbar {
+  // font-family: "Pixelify Sans", cursive;
+  // font-family: "Roboto Slab", serif;
+
+  background-color: lightgray;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 250px;
+    img {
+      height: 70px;
+      width: 70px;
+    }
+    .title {
+    }
+    .user {
+      position: relative;
+      .icon {
+        font-size: 40px;
+        color: white;
+      }
+      .count {
+        position: absolute;
+        bottom: 25px;
+        color: black;
+        font-size: 25px;
+      }
+    }
+  }
+}
