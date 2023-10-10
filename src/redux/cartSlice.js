@@ -19,7 +19,7 @@ const cartSlice = createSlice({
       );
 
       state.products = removeItem;
-      state.quantity = 0;
+      state.quantity -= 1;
     },
   },
 });
