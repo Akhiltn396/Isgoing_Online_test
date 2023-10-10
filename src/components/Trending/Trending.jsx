@@ -41,9 +41,29 @@ const Trending = () => {
   // }
 
   const handleClick = (product) => {
+
     console.log(product);
     setQuantity((prev) => prev + 1);
 
+    console.log(product.id);
+    const sheetData = {
+      productId: product.id,
+      productTitle: product.title,
+      productDesc: product.description,
+      productPrice: product.price,
+    };
+
+    axios
+      .post(
+        "https://sheet.best/api/sheets/f4612540-7136-4ebe-9a87-73202a779338",
+        sheetData
+      )
+      .then((res) => {
+        console.log("res",res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     dispatch(addProduct({ product, quantity }));
   };
 
